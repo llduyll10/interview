@@ -89,7 +89,7 @@
                   </tr>
                 </template>
                 <tr v-else>
-                  <td colspan="4" class="text-center">
+                  <td colspan="5" class="text-center">
                     <p>No data</p>
                   </td>
                 </tr>
