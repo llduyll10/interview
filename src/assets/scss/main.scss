@@ -1,0 +1,20 @@
+@import './variable.scss';
+
+//Component
+@import '../scss/component/drawer.scss';
+@import '../scss/component/breadcrumb.scss';
+@import '../scss//component/dropdownHover.scss';
+@import '../scss/component/loading.scss';
+
+//Pages
+@import '../scss/page/listData.scss';
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+ol ol, ul ul , ol ul, ul ol{
+  margin-bottom: 0;
+}
+body{
+  // padding-top: 51px; // Set for content beacasuse height of header is 51px
+}
