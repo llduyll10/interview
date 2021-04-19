@@ -4,7 +4,7 @@
     </button>
 </template>
 <script>
-import api from '@/services/base-services.js'
+import axios from 'axios'
 export default {
     methods:{
         callAPI(){
@@ -12,7 +12,16 @@ export default {
                 "email":"duy10@gmail.com",
                 "password":"123456"
             }
-            api.get('https://peaceful-journey-28732.herokuapp.com/api/login',obj)
+            let axiosConfig = {
+                headers: {
+                        'Content-type': 'application/json',
+                        'Access-Control-Allow-Origin':'*',
+                        'Access-Control-Allow-Methods':'GET,POST,PUT,DELETE,PATCH',
+                        'Access-Control-Allow-Headers':'Origin, Content-Type, X-Auth-Token'
+                    }
+            };
+
+            axios.post('https://peaceful-journey-28732.herokuapp.com/api/login',obj,axiosConfig)
                 .then(res =>{
                     console.log('res',res)
                 })
