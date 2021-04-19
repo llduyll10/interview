@@ -24,6 +24,13 @@ const routes = [
     component: () => import('../views/RemoveItem.vue'),
 
   },
+  {
+    path: '/test',
+    name: 'test',
+    meta:{breadCrumb: "Test"},
+    component: () => import('../views/TestAPI.vue'),
+
+  },
 ]
 
 const router = new VueRouter({
